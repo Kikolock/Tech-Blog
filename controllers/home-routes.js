@@ -47,7 +47,6 @@ router.get('/login', (req, res) => {
   } else {
     res.render('login');
   }
-  
 });
 
 router.get('/signUp', (req, res) => {
@@ -57,7 +56,6 @@ router.get('/signUp', (req, res) => {
   } else {
     res.render('signUp');
   }
-  
 });
 
 router.get('/post/:id', (req, res) => {
@@ -91,7 +89,7 @@ router.get('/post/:id', (req, res) => {
         res.status(404).json({ message: 'No post found with this id' });
         return;
       }
-
+      
       const post = dbPostData.get({ plain: true });
 
       res.render('single-post', { 

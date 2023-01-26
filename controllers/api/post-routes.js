@@ -3,7 +3,6 @@ const { Post, User, Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.get('/', (req, res) => {
-    console.log('======================');
     Post.findAll({
       order: [['created_at', 'DESC']], 
       attributes: [
@@ -132,7 +131,5 @@ router.delete('/:id', withAuth,  (req, res) => {
       res.status(500).json(err);
     });
 });
-
-
 
 module.exports = router;

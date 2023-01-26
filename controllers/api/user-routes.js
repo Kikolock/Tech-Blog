@@ -135,16 +135,15 @@ router.delete('/:id', (req, res) => {
 });
 
 router.post('/logout', (req, res) => {
-if (req.session.loggedIn) {
-  req.session.destroy(() => {
+  if (req.session.loggedIn) {
+   req.session.destroy(() => {
     console.log("User logged out");
     res.status(204).end();
   });
 }
-else {
-  res.status(404).end();
-}
+  else {
+    res.status(404).end();
+  }
 });
 
-
-  module.exports = router;
+module.exports = router;
