@@ -1,4 +1,4 @@
-# E-Commerce Back End
+# Tech blog
   ![MIT](https://img.shields.io/badge/license-MIT-brightgreen)
 
   ## Table of Contents
